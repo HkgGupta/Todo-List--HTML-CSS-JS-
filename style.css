@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #07296d, #540b66);
+    padding: 10px;
+}
+
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    margin: 80px auto 50px;
+    padding: 40px 30px 50px;
+}
+
+.todo-container h2 {
+    color: #03255c;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-container h2 img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.tasks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(247, 210, 179);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.tasks input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+form {
+    display: flex;
+    width: 100%;
+}
+
+.tasks button {
+    background: orangered;
+    border: none;
+    padding: 16px 50px;
+    border-radius: 40px;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#desc {
+    padding: 0 10px;
+    padding: 9px 20px;
+}
+
+.todo-container ul li {
+    position: relative;
+    overflow: auto;
+    list-style: none;
+    padding: 9px 19px 15px 44px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.todo-container ul li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/untick.png);
+    background-position: center;
+    background-size: cover;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/tick.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    color: rgb(70, 70, 70);
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+ul li span:hover {
+    color: red;
+}
